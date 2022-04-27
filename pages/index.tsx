@@ -65,8 +65,8 @@ const Home: NextPage = () => {
         )}
       </Disclosure>
       <footer className="text-center w-screen py-4 absolute bottom-0">
-        <a href="https://vercel.com/?utm_source=aqtion&utm_campaign=oss" target="_blank" rel="noopener">
-          <img className="inline" src="/powered-by-vercel.svg" />
+        <a href="https://vercel.com/?utm_source=aqtion&utm_campaign=oss" target="_blank" rel="noopener noreferrer">
+          <img className="inline" src="/powered-by-vercel.svg" alt="Powered By Vercel" />
         </a>
       </footer>
     </div>
