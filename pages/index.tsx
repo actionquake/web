@@ -1,9 +1,6 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Disclosure } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const Home: NextPage = () => {
   return (
