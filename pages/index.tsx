@@ -75,7 +75,7 @@ const Home: NextPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
         <div className="text-lg text-white text-center space-y-7">
           <h1 className="font-black text-3xl">The classic game is back in <span className="text-red-600">AQTION</span>!</h1>
-          <p>Play like you're the hero in an action movie in this fast-paced multiplayer FPS that spawned one of the most popular and influential games of all time, Counter-Strike. Realistic, locational damage and weapons are at your disposal, across over 600 community-made maps, dozens of player skins and models to choose from, in deathmatch, team deathmatch, capture the flag, three team and many more modes to play!</p>
+          <p>Play like you&apos;re the hero in an action movie in this fast-paced multiplayer FPS that spawned one of the most popular and influential games of all time, Counter-Strike. Realistic, locational damage and weapons are at your disposal, across over 600 community-made maps, dozens of player skins and models to choose from, in deathmatch, team deathmatch, capture the flag, three team and many more modes to play!</p>
           <div className="rounded-md shadow inline-block">
             <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-700 hover:bg-red-800 md:text-lg">
               Download Now
