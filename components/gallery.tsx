@@ -17,44 +17,44 @@ type Props = {
 const imageClass = 'block object-cover object-center w-full h-full rounded-lg'
 
 const Gallery = ({ className }: Props) => (
-    <section className={ className }>
+    <section id="screenshots" className={ className }>
         <div className="py-2 mx-auto">
             <div className="flex flex-wrap">
                 <div className="flex flex-wrap w-full">
                     <div className="flex flex-wrap w-full md:w-1/2">
                         <div className="w-full md:w-1/2 p-1 md:p-2">
-                            <Image alt="AQtion Screenshot 1" src={screen1} layout="responsive" placeholder="blur" />
+                            <a href="/screenshots/1.jpg" target="_blank"><Image alt="AQtion Screenshot 1" src={screen1} layout="responsive" placeholder="blur" /></a>
                         </div>
                         <div className="w-full md:w-1/2 p-1 md:p-2">
-                            <Image alt="AQtion Screenshot 2" src={screen2} layout="responsive" placeholder="blur" />
+                        <a href="/screenshots/2.jpg" target="_blank"><Image alt="AQtion Screenshot 2" src={screen2} layout="responsive" placeholder="blur" /></a>
                         </div>
                         <div className="w-full md:w-1/2 p-1 md:p-2">
-                            <Image alt="AQtion Screenshot 3" src={screen3} layout="responsive" placeholder="blur" />
+                        <a href="/screenshots/3.jpg" target="_blank"><Image alt="AQtion Screenshot 3" src={screen3} layout="responsive" placeholder="blur" /></a>
                         </div>
                         <div className="w-full md:w-1/2 p-1 md:p-2">
-                            <Image alt="AQtion Screenshot 4" src={screen4} layout="responsive" placeholder="blur" />
+                            <a href="/screenshots/4.jpg" target="_blank"><Image alt="AQtion Screenshot 4" src={screen4} layout="responsive" placeholder="blur" /></a>
                         </div>
                     </div>
                     <div className="w-full md:w-1/2 p-1 md:p-2">
-                        <Image alt="AQtion Screenshot 5" src={screen5} layout="responsive" placeholder="blur" />
+                        <a href="/screenshots/5.jpg" target="_blank"><Image alt="AQtion Screenshot 5" src={screen5} layout="responsive" placeholder="blur" /></a>
                     </div>
                 </div>
                 <div className="flex flex-wrap w-full">
                     <div className="w-full md:w-1/2 p-1 md:p-2">
-                        <Image alt="AQtion Screenshot 6" src={screen6} layout="responsive" placeholder="blur" />
+                        <a href="/screenshots/6.jpg" target="_blank"><Image alt="AQtion Screenshot 6" src={screen6} layout="responsive" placeholder="blur" /></a>
                     </div>
                     <div className="flex flex-wrap w-full md:w-1/2">
                         <div className="w-full md:w-1/2 p-1 md:p-2">
-                            <Image alt="AQtion Screenshot 7" src={screen7} layout="responsive" placeholder="blur" />
+                            <a href="/screenshots/7.jpg" target="_blank"><Image alt="AQtion Screenshot 7" src={screen7} layout="responsive" placeholder="blur" /></a>
                         </div>
                         <div className="w-full md:w-1/2 p-1 md:p-2">
-                            <Image alt="AQtion Screenshot 8" src={screen8} layout="responsive" placeholder="blur" />
+                            <a href="/screenshots/8.jpg" target="_blank"><Image alt="AQtion Screenshot 8" src={screen8} layout="responsive" placeholder="blur" /></a>
                         </div>
                         <div className="w-full md:w-1/2 p-1 md:p-2">
-                            <Image alt="AQtion Screenshot 9" src={screen9} layout="responsive" placeholder="blur" />
+                            <a href="/screenshots/9.jpg" target="_blank"><Image alt="AQtion Screenshot 9" src={screen9} layout="responsive" placeholder="blur" /></a>
                         </div>
                         <div className="w-full md:w-1/2 p-1 md:p-2">
-                            <Image alt="AQtion Screenshot 10" src={screen10} layout="responsive" placeholder="blur" />
+                            <a href="/screenshots/10.jpg" target="_blank"><Image alt="AQtion Screenshot 10" src={screen10} layout="responsive" placeholder="blur" /></a>
                         </div>
                     </div>
                 </div>
