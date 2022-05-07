@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Disclosure } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,7 +15,7 @@ const Header = ({}: Props) => (
               <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
                   <div className="flex-shrink-0 text-2xl text-red-600 font-bold">
-                    <a href="/">AQtion</a>
+                    <Link href="/">AQtion</Link>
                   </div>
                   <div className="hidden sm:block sm:ml-6">
                     <div className="flex space-x-4">
