@@ -40,9 +40,9 @@ const Home: NextPage = () => {
 
       <Gallery className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12"/>
 
-      <Download/>
+      <Download className="w-full"/>
 
-      <Discord/>
+      <Discord className="w-full"/>
 
       <footer className="max-w-7xl flex justify-between mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
         <div className="text-left text-zinc-400">
