@@ -29,7 +29,7 @@ const Download = ({ className, release }: Props) => (
                 <FontAwesomeIcon className={iconClass} icon={faSteam}  />Steam <span className={subTextClass}>Preferred Installation Method</span>
               </a>
             </div>
-            {release.assets.map((asset, i) => {
+            {release.assets?.map((asset, i) => {
                 if (Math.ceil(asset.size/1024/1024) <= 1 || !asset.platform) {
                     return false
                 }
