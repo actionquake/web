@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Disclosure } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSteam, faItchIo, faDiscord } from '@fortawesome/free-brands-svg-icons'
+import { faSteam, faItchIo, faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 type Props = {}
 
@@ -41,10 +41,13 @@ const Header = ({}: Props) => (
                         </span>
                         <FontAwesomeIcon className="h-6" icon={faDiscord} />
                     </a>
+                    <a className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" href="https://github.com/actionquake/distrib" title="GitHub Repository" rel="noopener noreferrer" target="_blank">
+                        <FontAwesomeIcon className="h-6" icon={faGithub} />
+                    </a>
                     <a className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" href="https://aqtion.itch.io/aqtion" title="Itch.io Page" rel="noopener noreferrer" target="_blank">
                         <FontAwesomeIcon className="h-6" icon={faItchIo} />
                     </a>
-                    <a className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" href="https://aqtion.itch.io/aqtion" title="Itch.io Page" rel="noopener noreferrer" target="_blank">
+                    <a className="cursor-not-allowed transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" title="Steam Page" rel="noopener noreferrer" target="_blank">
                         <FontAwesomeIcon className="h-6 cursor-not-allowed" icon={faSteam} />
                     </a>
                   </div>

@@ -1,50 +1,33 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSteam } from '@fortawesome/free-brands-svg-icons'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faApple, faLinux, faSteam, faWindows } from '@fortawesome/free-brands-svg-icons'
+import { faDownload, faFileZipper } from '@fortawesome/free-solid-svg-icons'
 import Header from '../components/header'
 import Gallery from '../components/gallery'
 import Download from '../components/download'
 import Discord from '../components/discord'
+import About from '../components/about'
+import Trailer from '../components/trailer'
 
-const Home: NextPage = () => {
+const Home: NextPage<Props> = ({ release }) => {
+  console.log(release)
   return (
     <div id="top" className="w-full bg-zinc-900 text-white">
 
       <Header/>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-        <div className="text-lg text-white text-center space-y-7">
-          <h1 id="about" className="font-black text-3xl">The classic game is back in <span className="text-red-600">AQTION</span>!</h1>
-          <p>Play like you&apos;re the hero in an action movie in this fast-paced multiplayer FPS that spawned one of the most popular and influential games of all time, Counter-Strike. Realistic, locational damage and weapons are at your disposal, across over 600 community-made maps, dozens of player skins and models to choose from, in deathmatch, team deathmatch, capture the flag, three team and many more modes to play!</p>
-          <div className="space-x-2">
-            <div className="rounded-md shadow inline-block">
-              <a href="#download" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-zinc-800 hover:bg-zinc-700 md:text-lg transition-all duration-300">
-                <FontAwesomeIcon className="h-5 mr-2" icon={faDownload}  />Direct Download
-              </a>
-            </div>
-            <div className="rounded-md shadow inline-block">
-              <a className="cursor-not-allowed w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-800 hover:bg-sky-700 md:text-lg leading-loose transition-all duration-300">
-                <FontAwesomeIcon className="h-5 mr-2" icon={faSteam} /> Download on Steam
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <About className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12"/>
 
-      <div className="w-full bg-black bg-cover mt-12" style={{backgroundImage: `url("/bg.jpg")` }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <iframe className="w-full aspect-video" id="ytplayer" src="https://www.youtube.com/embed/DtjbkBUl8cc?autoplay=1&controls=1&modestbranding=0&origin=https://www.aqtiongame.com" frame-border="0"></iframe>
-        </div>
+      <Trailer className="w-full bg-black bg-cover mt-12" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 md:flex md:space-x-12">
+        <Download className="w-full md:w-1/2" release={release} />
+        <Discord className="w-full md:w-1/2"/>
       </div>
 
       <Gallery className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12"/>
 
-      <Download className="w-full"/>
-
-      <Discord className="w-full"/>
-
-      <footer className="max-w-7xl flex justify-between mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
+      <footer className="max-w-7xl flex justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
         <div className="text-left text-zinc-400">
           &copy;2022 AQtion, All rights reserved
         </div>
@@ -64,6 +47,73 @@ const Home: NextPage = () => {
 
     </div>
   )
+}
+
+type Props = {
+  release: Release
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': 'token ' + process.env.GITHUB_ACCESS_TOKEN
+  }
+
+  const res = await fetch("https://api.github.com/repos/actionquake/distrib/releases/latest", {
+    method: 'GET',
+    headers
+  })
+
+  const json = await res.json()
+  if (json.errors) {
+    console.error(json.errors)
+    throw new Error('Failed to fetch API')
+  }
+
+  const assets = json.assets.map((asset: any) => {
+    let platformRegex = new RegExp('(windows|mac|linux)')
+    let platform = asset.name.match(platformRegex)?.[0] ?? null
+    let platformIcon = faFileZipper
+    if (platform === 'windows') {
+      platformIcon = faWindows
+    }
+    if (platform === 'mac') {
+      platformIcon = faApple
+    }
+    if (platform === 'linux') {
+      platformIcon = faLinux
+    }
+
+    return ({
+      id: asset.id,
+      platform: platform,
+      platformIcon: platformIcon,
+      url: asset.browser_download_url,
+      name: asset.name,
+      content_type: asset.content_type,
+      state: asset.state,
+      size: asset.size,
+      created_at: asset.created_at,
+      updated_at: asset.updated_at
+    } as Asset)
+  })
+
+  const release: Release = {
+    id: json.id,
+    url: json.html_url,
+    version: json.tag_name,
+    name: json.name,
+    notes: json.body,
+    draft: json.draft,
+    prerelease: json.prerelease,
+    assets: assets,
+    created_at: json.created_at,
+    published_at: json.published_at
+  }
+
+  return {
+    props: { release: release },
+  }
 }
 
 export default Home
