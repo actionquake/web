@@ -33,7 +33,7 @@ const Download = ({ className, release }: Props) => (
                 if (Math.ceil(asset.size/1024/1024) <= 1 || !asset.platform) {
                     return false
                 }
-                return (<div className={buttonClass}><a href={asset.url} className={linkClass} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className={iconClass} icon={asset.platformIcon}  />{asset.name} <span className={subTextClass}>{Math.ceil(asset.size/1024/1024)} MB</span></a></div>)
+                return (<div key={asset.id} className={buttonClass}><a href={asset.url} className={linkClass} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className={iconClass} icon={asset.platformIcon}  />{asset.name} <span className={subTextClass}>{Math.ceil(asset.size/1024/1024)} MB</span></a></div>)
             })}
           </div>
     </div>
