@@ -10,7 +10,6 @@ import About from '../components/about'
 import Trailer from '../components/trailer'
 
 const Home: NextPage<Props> = ({ release }) => {
-  console.log(release)
   return (
     <div id="top" className="w-full bg-zinc-900 text-white">
 
