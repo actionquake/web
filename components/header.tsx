@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Disclosure } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSteam, faItchIo, faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faSteam, faItchIo, faDiscord, faGithub, faPatreon } from '@fortawesome/free-brands-svg-icons'
 
 type Props = {}
 
@@ -40,6 +40,9 @@ const Header = ({}: Props) => (
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                         </span>
                         <FontAwesomeIcon className="h-6" icon={faDiscord} />
+                    </a>
+                    <a className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" href="https://www.patreon.com/bePatron?u=73918382" title="Become a patron" rel="noopener noreferrer" target="_blank">
+                        <FontAwesomeIcon className="h-6" icon={faPatreon} />
                     </a>
                     <a className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" href="https://github.com/actionquake/distrib" title="GitHub Repository" rel="noopener noreferrer" target="_blank">
                         <FontAwesomeIcon className="h-6" icon={faGithub} />
