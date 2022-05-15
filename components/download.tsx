@@ -22,7 +22,7 @@ const Download = ({ className, release }: Props) => (
         <FontAwesomeIcon className="text-zinc-400 h-6 mr-4" icon={faLinux}  />
     </h2>
     <p className="mt-6">Our <a href="https://store.steampowered.com/app/1978800/AQtion/" title="Steam Page" rel="noopener noreferrer" target="_blank">Steam page</a> is the preferred, and easiest method to get up-and-running, but we also offer manual installers below and through our <a href="https://aqtion.itch.io/aqtion" target="_blank" rel="noopener noreferrer">Itch.io page</a>.</p>
-    <p className="mt-6">Latest release: AQtion {release.version} published on {release.published_at.toString()}</p>
+    <p className="mt-6">Latest release: AQtion {release.version} published on {Intl.DateTimeFormat('en-us', { month: 'short', day: 'numeric', year: 'numeric' }).format(new Date(release.published_at))}.</p>
     <div className="space-y-2 mt-6">
       <div className={buttonClass}>
         <a href="https://store.steampowered.com/app/1978800/AQtion/" title="Steam Page" rel="noopener noreferrer" target="_blank" className={steamLinkClass}>
