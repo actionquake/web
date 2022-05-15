@@ -14,29 +14,29 @@ const linkClass: string = 'w-full flex items-center justify-center px-8 py-3 bor
 const subTextClass: string = 'text-xs text-zinc-200 ml-4'
 
 const Download = ({ className, release }: Props) => (
-    <div id="download" className={ className }>
-        <h2 className="text-3xl font-bold text-center md:text-left">
-            <div className="mb-2 md:mb-0 md:mr-4 md:inline-block">AQtion Downloads</div>
-            <FontAwesomeIcon className="text-zinc-400 h-6 mr-4" icon={faWindows}  />
-            <FontAwesomeIcon className="text-zinc-400 h-6 mr-4" icon={faApple}  />
-            <FontAwesomeIcon className="text-zinc-400 h-6 mr-4" icon={faLinux}  />
-        </h2>
-        <p className="mt-6">Our <a href="https://store.steampowered.com/app/1978800/AQtion/" title="Steam Page" rel="noopener noreferrer" target="_blank">Steam page</a> is the preferred, and easiest method to get up-and-running, but we also offer manual installers below and through our <a href="https://aqtion.itch.io/aqtion" target="_blank" rel="noopener noreferrer">Itch.io page</a>.</p>
-        <p className="mt-6">Latest release: AQtion {release.version} published on {release.published_at.toString()}</p>
-        <div className="space-y-2 mt-6">
-            <div className={buttonClass}>
-              <a href="https://store.steampowered.com/app/1978800/AQtion/" title="Steam Page" rel="noopener noreferrer" target="_blank" className={steamLinkClass}>
-                <FontAwesomeIcon className={iconClass} icon={faSteam}  />Steam <span className={subTextClass}>Preferred Installation Method</span>
-              </a>
-            </div>
-            {release.assets?.map((asset, i) => {
-                if (Math.ceil(asset.size/1024/1024) <= 1 || !asset.platform) {
-                    return false
-                }
-                return (<div key={asset.id} className={buttonClass}><a href={asset.url} className={linkClass} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className={iconClass} icon={asset.platformIcon}  />{asset.name} <span className={subTextClass}>{Math.ceil(asset.size/1024/1024)} MB</span></a></div>)
-            })}
-          </div>
+  <div id="download" className={ className }>
+    <h2 className="text-3xl font-bold text-center md:text-left">
+        <div className="mb-2 md:mb-0 md:mr-4 md:inline-block">AQtion Downloads</div>
+        <FontAwesomeIcon className="text-zinc-400 h-6 mr-4" icon={faWindows}  />
+        <FontAwesomeIcon className="text-zinc-400 h-6 mr-4" icon={faApple}  />
+        <FontAwesomeIcon className="text-zinc-400 h-6 mr-4" icon={faLinux}  />
+    </h2>
+    <p className="mt-6">Our <a href="https://store.steampowered.com/app/1978800/AQtion/" title="Steam Page" rel="noopener noreferrer" target="_blank">Steam page</a> is the preferred, and easiest method to get up-and-running, but we also offer manual installers below and through our <a href="https://aqtion.itch.io/aqtion" target="_blank" rel="noopener noreferrer">Itch.io page</a>.</p>
+    <p className="mt-6">Latest release: AQtion {release.version} published on {release.published_at.toString()}</p>
+    <div className="space-y-2 mt-6">
+      <div className={buttonClass}>
+        <a href="https://store.steampowered.com/app/1978800/AQtion/" title="Steam Page" rel="noopener noreferrer" target="_blank" className={steamLinkClass}>
+          <FontAwesomeIcon className={iconClass} icon={faSteam}  />Steam <span className={subTextClass}>Preferred Installation Method</span>
+        </a>
+      </div>
+      {release.assets?.map((asset, i) => {
+        if (Math.ceil(asset.size/1024/1024) <= 1 || !asset.platform) {
+          return false
+        }
+        return (<div key={asset.id} className={buttonClass}><a href={asset.url} className={linkClass} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className={iconClass} icon={asset.platformIcon}  />{asset.name} <span className={subTextClass}>{Math.ceil(asset.size/1024/1024)} MB</span></a></div>)
+      })}
     </div>
+  </div>
 )
 
 export default Download
