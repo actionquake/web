@@ -19,7 +19,7 @@ const About = ({ className }: Props) => (
           </a>
         </div>
         <div className="rounded-md shadow block md:inline-block">
-          <a className="cursor-not-allowed w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-800 hover:bg-sky-700 md:text-lg leading-loose transition-all duration-300">
+          <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-800 hover:bg-sky-700 md:text-lg leading-loose transition-all duration-300" href="https://store.steampowered.com/app/1978800/AQtion/" title="Steam Page" rel="noopener noreferrer" target="_blank">
             <FontAwesomeIcon className="h-5 mr-2" icon={faSteam} /> Download on Steam
           </a>
         </div>
