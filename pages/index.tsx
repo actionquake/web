@@ -8,6 +8,7 @@ import Download from '../components/download'
 import Discord from '../components/discord'
 import About from '../components/about'
 import Trailer from '../components/trailer'
+import Footer from '../components/footer'
 
 const Home: NextPage<Props> = ({ release }) => {
   return (
@@ -21,28 +22,12 @@ const Home: NextPage<Props> = ({ release }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 md:flex md:space-x-12">
         <Download className="w-full md:w-1/2" release={release} />
-        <Discord className="w-full md:w-1/2"/>
+        <Discord className="w-full mt-4 md:mt-0 md:w-1/2 h-96 md:h-auto"/>
       </div>
 
       <Gallery className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12"/>
 
-      <footer className="max-w-7xl flex justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6">
-        <div className="text-left text-zinc-400">
-          &copy;2022 AQtion, All rights reserved
-        </div>
-        <div className="space-x-4 text-zinc-400">
-          <a className="transition-all duration-300 hover:text-white" href="#about">About</a>
-          <a className="transition-all duration-300 hover:text-white" href="#screenshots">Screenshots</a>
-          <a className="transition-all duration-300 hover:text-white" href="#download">Download</a>
-          <span>&ndash;</span>
-          <a className="transition-all duration-300 hover:text-white" href="#top">Back to Top</a>
-        </div>
-        <div className="text-right flex-grow-0">
-          <a href="https://vercel.com/?utm_source=aqtion&utm_campaign=oss" target="_blank" rel="noopener noreferrer">
-            <img className="inline" src="/powered-by-vercel.svg" alt="Powered By Vercel" />
-          </a>
-        </div>
-      </footer>
+      <Footer className="w-full md:max-w-7xl md:flex justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 space-y-4 md:space-y-0" />
 
     </div>
   )

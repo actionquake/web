@@ -50,8 +50,8 @@ const Header = ({}: Props) => (
                     <a className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" href="https://aqtion.itch.io/aqtion" title="Itch.io Page" rel="noopener noreferrer" target="_blank">
                         <FontAwesomeIcon className="h-6" icon={faItchIo} />
                     </a>
-                    <a className="cursor-not-allowed transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" title="Steam Page" rel="noopener noreferrer" target="_blank">
-                        <FontAwesomeIcon className="h-6 cursor-not-allowed" icon={faSteam} />
+                    <a className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" href="https://store.steampowered.com/app/1978800/AQtion/" title="Steam Page" rel="noopener noreferrer" target="_blank">
+                        <FontAwesomeIcon className="h-6" icon={faSteam} />
                     </a>
                   </div>
                 </div>
@@ -72,16 +72,40 @@ const Header = ({}: Props) => (
             <Disclosure.Panel className="sm:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
+                <Disclosure.Button as="a" href="#about" className="block transition-all duration-300 bg-zinc-900 bg-opacity-25 text-white px-3 py-2 rounded-md text-lg font-medium">
                   About
                 </Disclosure.Button>
+                <Disclosure.Button as="a" href="#screenshots" className="block transition-all duration-300 bg-zinc-900 bg-opacity-25 text-white px-3 py-2 rounded-md text-lg font-medium">
+                  Screenshots
+                </Disclosure.Button>
+                <Disclosure.Button as="a" href="#download" className="block transition-all duration-300 bg-zinc-900 bg-opacity-25 text-white px-3 py-2 rounded-md text-lg font-medium">
+                  Download
+                </Disclosure.Button>
+                <div>
+
+                </div>
               </div>
               <div className="pt-4 pb-3 border-t border-gray-700">
-                <div className="flex items-center px-5">
+                <div className="flex items-center justify-between px-5">
+                  <Disclosure.Button as="a" href="https://discord.gg/aq2world" title="Join us on Discord!" className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block relative" rel="noopener noreferrer" target="_blank">
+                    <span className="flex h-2 w-2 absolute top-1 right-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                    </span>
+                    <FontAwesomeIcon className="h-6" icon={faDiscord} />
+                  </Disclosure.Button>
+                  <Disclosure.Button as="a" href="https://www.patreon.com/bePatron?u=73918382" title="Become a patron" className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" rel="noopener noreferrer" target="_blank">
+                    <FontAwesomeIcon className="h-6" icon={faPatreon} />
+                  </Disclosure.Button>
+                  <Disclosure.Button as="a" href="https://github.com/actionquake/distrib" title="GitHub Repository" className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" rel="noopener noreferrer" target="_blank">
+                    <FontAwesomeIcon className="h-6" icon={faGithub} />
+                  </Disclosure.Button>
+                  <Disclosure.Button as="a" href="https://aqtion.itch.io/aqtion" title="Itch.io Page" className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" rel="noopener noreferrer" target="_blank">
+                    <FontAwesomeIcon className="h-6" icon={faItchIo} />
+                  </Disclosure.Button>
+                  <Disclosure.Button as="a" href="https://store.steampowered.com/app/1978800/AQtion/" title="Steam Page" className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" rel="noopener noreferrer" target="_blank">
+                    <FontAwesomeIcon className="h-6" icon={faSteam} />
+                  </Disclosure.Button>
                 </div>
               </div>
             </Disclosure.Panel>
