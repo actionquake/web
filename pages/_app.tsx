@@ -5,10 +5,11 @@ import { useRouter } from 'next/router';
 import * as Fathom from 'fathom-client';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-  const fathomSiteId: string = process.env.FATHOM_SITE_ID ?? '';
 
   useEffect(() => {
+    const router = useRouter();
+    const fathomSiteId: string = process.env.FATHOM_SITE_ID ?? '';
+
     Fathom.load(fathomSiteId, {
       includedDomains: ['www.aqtiongame.com'],
     });
