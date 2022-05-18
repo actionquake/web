@@ -13,7 +13,7 @@ Router.events.on('routeChangeComplete', (as, routeProps) => {
 function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
-    Fathom.load(process.env.FATHOM_SITE_ID ?? '', {
+    Fathom.load('MYJRAPAB', {
       includedDomains: ['www.aqtiongame.com']
     });
   }, []);
