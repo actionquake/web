@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     Fathom.load('MYJRAPAB', {
+      url: 'https://restored-stay.aqtiongame.com/script.js',
       includedDomains: ['www.aqtiongame.com']
     });
   }, []);
