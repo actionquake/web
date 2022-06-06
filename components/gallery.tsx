@@ -18,6 +18,9 @@ const imageClass = 'block object-cover object-center w-full h-full rounded-lg'
 
 const Gallery = ({ className }: Props) => (
     <section id="screenshots" className={ className }>
+        <div className="mb-6">
+            <iframe className="w-full aspect-video" src="https://www.youtube.com/embed/xOQSLV6Vx9g?rel=0autoplay=0&controls=1&modestbranding=0&origin=https://www.aqtiongame.com" frame-border="0"></iframe>
+        </div>
         <div className="py-2 mx-auto">
             <div className="flex flex-wrap">
                 <div className="flex flex-wrap w-full">
@@ -59,6 +62,9 @@ const Gallery = ({ className }: Props) => (
                     </div>
                 </div>
             </div>
+        </div>
+        <div className="mt-6">
+            <iframe className="w-full aspect-video" src="https://www.youtube.com/embed/q4wIT2GlIIk?rel=0autoplay=0&controls=1&modestbranding=0&origin=https://www.aqtiongame.com" frame-border="0"></iframe>
         </div>
     </section>
 )
