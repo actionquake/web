@@ -47,9 +47,6 @@ const Header = ({}: Props) => (
                     <a className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" href="https://github.com/actionquake/distrib" title="GitHub Repository" rel="noopener noreferrer" target="_blank">
                         <FontAwesomeIcon className="h-6" icon={faGithub} />
                     </a>
-                    <a className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" href="https://aqtion.itch.io/aqtion" title="Itch.io Page" rel="noopener noreferrer" target="_blank">
-                        <FontAwesomeIcon className="h-6" icon={faItchIo} />
-                    </a>
                     <a className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" href="https://store.steampowered.com/app/1978800/AQtion/" title="Steam Page" rel="noopener noreferrer" target="_blank">
                         <FontAwesomeIcon className="h-6" icon={faSteam} />
                     </a>
@@ -99,9 +96,6 @@ const Header = ({}: Props) => (
                   </Disclosure.Button>
                   <Disclosure.Button as="a" href="https://github.com/actionquake/distrib" title="GitHub Repository" className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" rel="noopener noreferrer" target="_blank">
                     <FontAwesomeIcon className="h-6" icon={faGithub} />
-                  </Disclosure.Button>
-                  <Disclosure.Button as="a" href="https://aqtion.itch.io/aqtion" title="Itch.io Page" className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" rel="noopener noreferrer" target="_blank">
-                    <FontAwesomeIcon className="h-6" icon={faItchIo} />
                   </Disclosure.Button>
                   <Disclosure.Button as="a" href="https://store.steampowered.com/app/1978800/AQtion/" title="Steam Page" className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block" rel="noopener noreferrer" target="_blank">
                     <FontAwesomeIcon className="h-6" icon={faSteam} />
