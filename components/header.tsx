@@ -34,7 +34,7 @@ const Header = ({}: Props) => (
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex items-center space-x-1">
-                    <a className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block relative" href="https://discord.gg/aq2world" title="Join us on Discord!" rel="noopener noreferrer" target="_blank">
+                    <a className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block relative" href="https://discord.aq2world.com" title="Join us on Discord!" rel="noopener noreferrer" target="_blank">
                         <span className="flex h-2 w-2 absolute top-1 right-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
@@ -87,7 +87,7 @@ const Header = ({}: Props) => (
               </div>
               <div className="pt-4 pb-3 border-t border-gray-700">
                 <div className="flex items-center justify-between px-5">
-                  <Disclosure.Button as="a" href="https://discord.gg/aq2world" title="Join us on Discord!" className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block relative" rel="noopener noreferrer" target="_blank">
+                  <Disclosure.Button as="a" href="https://discord.aq2world.com" title="Join us on Discord!" className="transition-all duration-300 hover:bg-zinc-900 text-zinc-200 hover:text-white px-3 py-2 rounded-md inline-block relative" rel="noopener noreferrer" target="_blank">
                     <span className="flex h-2 w-2 absolute top-1 right-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>

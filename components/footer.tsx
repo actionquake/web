@@ -7,7 +7,7 @@ type Props = {
 const Footer = ({ className }: Props) => (
   <footer className={className}>
     <div className="text-center md:text-left text-zinc-400">
-      &copy;2022 AQtion, All rights reserved
+      &copy;2025 AQtion, All rights reserved
     </div>
     <div className="space-x-4 text-zinc-400">
       <a className="transition-all duration-300 hover:text-white" href="#about">About</a>
