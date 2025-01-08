@@ -17,9 +17,9 @@
     "@headlessui/react": "^1.6.0",
     "@heroicons/react": "^1.0.6",
     "fathom-client": "^3.4.1",
-    "next": "12.1.5",
-    "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "next": "15.1.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@types/node": "17.0.27",
