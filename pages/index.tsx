@@ -83,20 +83,21 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   })
 
   const release: Release = {
-    id: json.id,
-    url: json.html_url,
-    version: json.tag_name,
-    name: json.name,
-    notes: json.body,
-    draft: json.draft,
-    prerelease: json.prerelease,
+    id: json.id || '',
+    url: json.html_url || '',
+    version: json.tag_name || '',
+    name: json.name || '',
+    notes: json.body || '',
+    draft: json.draft || false,
+    prerelease: json.prerelease || false,
     assets: assets,
-    created_at: json.created_at,
-    published_at: json.published_at
+    created_at: json.created_at || '',
+    published_at: json.published_at || ''
   }
 
   return {
     props: { release: release },
+    revalidate: 60
   }
 }
 
