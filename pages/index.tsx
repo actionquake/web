@@ -1,6 +1,7 @@
 import type { GetStaticProps, NextPage } from 'next'
 import { faApple, faLinux, faWindows } from '@fortawesome/free-brands-svg-icons'
 import { faFileZipper } from '@fortawesome/free-solid-svg-icons'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Header from '../components/header'
 import Gallery from '../components/gallery'
 import Download from '../components/download'
@@ -28,6 +29,7 @@ const Home: NextPage<Props> = ({ release }) => {
 
       <Footer className="w-full md:max-w-7xl md:flex justify-between items-center mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 space-y-4 md:space-y-0" />
 
+      <SpeedInsights />
     </div>
   )
 }
