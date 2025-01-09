@@ -4,10 +4,12 @@ type Props = {
   className: string
 }
 
+const currentYear = new Date().getFullYear()
+
 const Footer = ({ className }: Props) => (
   <footer className={className}>
     <div className="text-center md:text-left text-zinc-400">
-      &copy;2025 AQtion, All rights reserved
+      &copy;{currentYear} AQtion, All rights reserved
     </div>
     <div className="space-x-4 text-zinc-400">
       <a className="transition-all duration-300 hover:text-white" href="#about">About</a>
